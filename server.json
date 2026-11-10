@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "cc.kreatix/kreatix",
+  "title": "Kreatix",
+  "description": "Schedule and publish posts to Instagram, TikTok, YouTube, Facebook, X, LinkedIn and Pinterest.",
+  "version": "1.0.0",
+  "websiteUrl": "https://kreatix.cc/ai-agents/",
+  "icons": [
+    {
+      "src": "https://kreatix.cc/favicon.svg",
+      "mimeType": "image/svg+xml"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.kreatix.cc/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Kreatix agent key as a Bearer token. Create one at https://kreatix.cc/settings/agent",
+          "isRequired": true,
+          "isSecret": true,
+          "value": "Bearer {kreatix_key}",
+          "variables": {
+            "kreatix_key": {
+              "description": "Kreatix agent key (starts with kx_live_)",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

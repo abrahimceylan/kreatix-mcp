@@ -3,8 +3,12 @@
   "name": "cc.kreatix/kreatix",
   "title": "Kreatix",
   "description": "Schedule and publish posts to Instagram, TikTok, YouTube, Facebook, X, LinkedIn and Pinterest.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://kreatix.cc/ai-agents/",
+  "repository": {
+    "url": "https://github.com/abrahimceylan/kreatix-mcp",
+    "source": "github"
+  },
   "icons": [
     {
       "src": "https://kreatix.cc/favicon.svg",

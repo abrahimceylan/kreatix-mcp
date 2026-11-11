@@ -6,6 +6,9 @@ Let your AI agent schedule posts to your Instagram, TikTok, YouTube, Facebook, X
 
 [Kreatix](https://kreatix.cc) is a social media scheduler for people who run many pages: one video goes to every connected page at once, each with its own platform settings. This repository documents its hosted MCP server. There is nothing to install or run.
 
+<p align="center"><img src="assets/demo.gif" width="800" alt="An agent asks Kreatix to post a TikTok link to a brand's Instagram, TikTok, Facebook and YouTube pages tomorrow at 18:00; Kreatix shows the plan, schedules four posts and they go out."></p>
+<p align="center"><sub>Example. The brands are made up. Live version: <a href="https://kreatix.cc/ai-agents/">kreatix.cc/ai-agents</a></sub></p>
+
 | | |
 |---|---|
 | Address | `https://api.kreatix.cc/mcp` |

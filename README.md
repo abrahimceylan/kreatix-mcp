@@ -10,10 +10,28 @@ Let your AI agent schedule posts to your Instagram, TikTok, YouTube, Facebook, X
 |---|---|
 | Address | `https://api.kreatix.cc/mcp` |
 | Transport | Streamable HTTP, stateless |
-| Auth | Your Kreatix agent key, as `Authorization: Bearer kx_live_...` or inside the address: `https://api.kreatix.cc/mcp/kx_live_...` |
+| Auth | Sign in with Kreatix (OAuth 2.1 with PKCE; client ID metadata documents and dynamic registration), or your Kreatix agent key as `Authorization: Bearer kx_live_...` or inside the address: `https://api.kreatix.cc/mcp/kx_live_...` |
 | MCP Registry | [`cc.kreatix/kreatix`](https://registry.modelcontextprotocol.io/v0/servers?search=cc.kreatix) |
 
+## Sign in, no key
+
+Most agents connect with the bare address and a sign-in: add `https://api.kreatix.cc/mcp`, the agent opens Kreatix, you sign in and press Allow.
+
+- **Claude**: Customize > Connectors > Add > Add custom connector. Paste the address, Continue, Add, then Connect.
+- **ChatGPT**: chatgpt.com/plugins > + > Add custom MCP server. Paste the address, choose OAuth, create the plugin and install it.
+- **Grok**: grok.com/connectors > New Connector > Custom. Paste the address.
+- **Claude Code**: `claude mcp add --transport http --scope user kreatix https://api.kreatix.cc/mcp`, then `/mcp` in claude.
+- **Codex**: `codex mcp add kreatix --url https://api.kreatix.cc/mcp`, then `codex mcp login kreatix`.
+- **Cursor**: `{"mcpServers": {"kreatix": {"url": "https://api.kreatix.cc/mcp"}}}` in `~/.cursor/mcp.json`, then sign in when Cursor asks.
+- **OpenClaw**: `openclaw mcp add kreatix --url https://api.kreatix.cc/mcp --transport streamable-http --auth oauth`.
+
+Each connected app gets a key named after it in Settings > AI agent; delete it there to cut the app off.
+
+Step-by-step guides for each agent and platform: [kreatix.cc/ai-agents](https://kreatix.cc/ai-agents/), for example [Claude](https://kreatix.cc/ai-agents/claude/), [ChatGPT](https://kreatix.cc/ai-agents/chatgpt/), [Claude Code](https://kreatix.cc/ai-agents/claude-code/), [Cursor](https://kreatix.cc/ai-agents/cursor/), [Codex](https://kreatix.cc/ai-agents/codex/), [Grok](https://kreatix.cc/ai-agents/grok/) and [OpenClaw](https://kreatix.cc/ai-agents/openclaw/). In Turkish: [Claude](https://kreatix.cc/tr/yapay-zeka-ajani/claude/), [ChatGPT](https://kreatix.cc/tr/yapay-zeka-ajani/chatgpt/).
+
 ## Get a key
+
+For apps without sign-in, or when you would rather paste a key:
 
 1. Sign up at [kreatix.cc](https://kreatix.cc) and connect your pages.
 2. Open Settings, then AI agent ([kreatix.cc/settings/agent](https://kreatix.cc/settings/agent)) and create a key. It is shown once.
@@ -21,15 +39,15 @@ Let your AI agent schedule posts to your Instagram, TikTok, YouTube, Facebook, X
 
 Scheduling through an agent needs a paid plan or a running trial, the same as scheduling in the app. It costs nothing extra.
 
-## Connect your agent
+## Connect with a key
 
-**Claude** (claude.ai and Claude Desktop): open Customize, Connectors, Add custom connector, and paste the address with your key:
+**Claude** (claude.ai and Claude Desktop): Customize > Connectors > Add > Add custom connector. Paste the address with your key, press Continue, choose No sign-in under Authentication, then Add:
 
 ```
 https://api.kreatix.cc/mcp/YOUR_KEY
 ```
 
-**ChatGPT**: open chatgpt.com/plugins, press + and choose Add custom MCP server, with No authentication. Paste the same address with your key.
+**ChatGPT**: open chatgpt.com/plugins, press + and choose Add custom MCP server. Paste the same address with your key, choose No authentication, then create and install the plugin.
 
 **Grok**: open grok.com/connectors and choose New Connector, Custom. Paste the same address with your key.
 
@@ -109,10 +127,11 @@ A video can be one already in your Kreatix library, or a public YouTube, TikTok,
 
 ## Skill file
 
-[`skills/kreatix/SKILL.md`](skills/kreatix/SKILL.md) is a skill for OpenClaw and other agents that read SKILL.md files. It calls the same server with curl.
+[`skills/kreatix/SKILL.md`](skills/kreatix/SKILL.md) is a skill for OpenClaw and other agents that read SKILL.md files. It calls the same server with curl. It is on ClawHub: `openclaw skills install @abrahimceylan/kreatix`.
 
 ## Links
 
-- Setup page: [kreatix.cc/ai-agents](https://kreatix.cc/ai-agents/)
+- Setup page and guides: [kreatix.cc/ai-agents](https://kreatix.cc/ai-agents/)
+- Compared with other schedulers: [Postiz](https://kreatix.cc/vs/postiz/), [Buffer](https://kreatix.cc/vs/buffer/), [Later](https://kreatix.cc/vs/later/), [Hootsuite](https://kreatix.cc/vs/hootsuite/), [Sprout Social](https://kreatix.cc/vs/sprout/)
 - Website: [kreatix.cc](https://kreatix.cc)
 - Support: support@kreatix.cc

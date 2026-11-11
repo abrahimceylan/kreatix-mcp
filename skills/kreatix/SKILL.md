@@ -1,7 +1,7 @@
 ---
 name: kreatix
 description: Schedule videos and text posts to Instagram, TikTok, YouTube, Facebook, X, LinkedIn and Pinterest with Kreatix, move or cancel them, and read views and follower stats.
-version: 0.1.0
+version: 1.0.0
 metadata:
   openclaw:
     emoji: "📅"

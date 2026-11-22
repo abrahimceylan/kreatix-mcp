@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "cc.kreatix/kreatix",
   "title": "Kreatix",
-  "description": "Schedule and publish posts to Instagram, TikTok, YouTube, Facebook, X, LinkedIn and Pinterest.",
-  "version": "1.0.1",
+  "description": "Social media scheduler, many accounts: Instagram, TikTok, YouTube, Facebook, X, LinkedIn, Pinterest",
+  "version": "1.0.2",
   "websiteUrl": "https://kreatix.cc/ai-agents/",
   "repository": {
     "url": "https://github.com/abrahimceylan/kreatix-mcp",

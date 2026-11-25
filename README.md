@@ -2,6 +2,8 @@
 
 # Kreatix MCP server
 
+[![Kreatix MCP connector](https://glama.ai/mcp/connectors/cc.kreatix/kreatix/badges/score.svg)](https://glama.ai/mcp/connectors/cc.kreatix/kreatix)
+
 Let your AI agent schedule posts to your Instagram, TikTok, YouTube, Facebook, X, LinkedIn and Pinterest pages, move or cancel them, and read your numbers.
 
 [Kreatix](https://kreatix.cc) is a social media scheduler for people who run many pages: one video goes to every connected page at once, each with its own platform settings. This repository documents its hosted MCP server. There is nothing to install or run.
@@ -15,6 +17,7 @@ Let your AI agent schedule posts to your Instagram, TikTok, YouTube, Facebook, X
 | Transport | Streamable HTTP, stateless |
 | Auth | Sign in with Kreatix (OAuth 2.1 with PKCE; client ID metadata documents and dynamic registration), or your Kreatix agent key as `Authorization: Bearer kx_live_...` or inside the address: `https://api.kreatix.cc/mcp/kx_live_...` |
 | MCP Registry | [`cc.kreatix/kreatix`](https://registry.modelcontextprotocol.io/v0/servers?search=cc.kreatix) |
+| Glama | [`cc.kreatix/kreatix`](https://glama.ai/mcp/connectors/cc.kreatix/kreatix) |
 
 ## Sign in, no key
 

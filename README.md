@@ -2,7 +2,7 @@
 
 # Kreatix MCP server
 
-[![Kreatix MCP connector](https://glama.ai/mcp/connectors/cc.kreatix/kreatix/badges/score.svg)](https://glama.ai/mcp/connectors/cc.kreatix/kreatix)
+[![Kreatix MCP connector](https://glama.ai/mcp/connectors/cc.kreatix/kreatix/badges/score.svg)](https://glama.ai/mcp/connectors/cc.kreatix/kreatix) [![Listed in Awesome MCP Servers](https://sagargupta.online/awesome-mcp-servers/badge.svg)](https://github.com/Sagargupta16/awesome-mcp-servers)
 
 Let your AI agent schedule posts to your Instagram, TikTok, YouTube, Facebook, X, LinkedIn and Pinterest pages, move or cancel them, and read your numbers.
 
